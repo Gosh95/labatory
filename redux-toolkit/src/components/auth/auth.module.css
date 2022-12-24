@@ -1,0 +1,19 @@
+.form div:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  margin-top: 0.4rem;
+}
+
+.form button {
+  width: 100%;
+  cursor: pointer;
+  background: inherit;
+  border: 1px solid black;
+}
