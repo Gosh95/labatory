@@ -1,13 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { count: 0 };
+interface CounterState {
+  count: number;
+}
 
 const counterSlice = createSlice({
   name: 'counter',
-  initialState,
+  initialState: { count: 0 } as CounterState,
   reducers: {
     increase(state) {
-      state.count++; //redux toolkit은 내부적으로 immer 패키지를 사용하고 있기 때문에 사용자가 불변성에 대해서 신경을 써야하는 수고로움을 덜어준다.
+      state.count++;
     },
     decrease(state) {
       state.count--;

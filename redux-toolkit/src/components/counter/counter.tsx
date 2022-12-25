@@ -2,9 +2,10 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { counterActions } from '../../store/reducers/counter';
 import classes from './counter.module.css';
+import { ReducerType } from '../../store/reducers/root';
 
 const Counter = () => {
-  const count = useSelector((state) => state.counter.count);
+  const count = useSelector<ReducerType, number>((state) => state.counter.count);
   const dispatch = useDispatch();
 
   const incrementHandler = () => {
